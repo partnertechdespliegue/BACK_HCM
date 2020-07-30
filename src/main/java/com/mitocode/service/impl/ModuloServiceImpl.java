@@ -109,7 +109,7 @@ public class ModuloServiceImpl implements ModuloService {
 				List<Pagina> lspaginaFinal = new ArrayList<>();
 				for (Pagina pagina : p.getLspaginas()) {
 					if (pagina.getModulo().getIdModulo() == modulo.getIdModulo()) {
-						lspaginaFinal.add(0, pagina);
+						lspaginaFinal.add(pagina);
 					}
 				}
 				modulo.setLspagina(lspaginaFinal);
