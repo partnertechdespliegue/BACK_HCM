@@ -209,6 +209,7 @@ public class Trabajador {
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "trabajador")
 	private EncargadoPlanilla encargadoPlanilla;
 	
+	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "trabajador")
 	private List<Solicitud> lsSolicitud;
 	
