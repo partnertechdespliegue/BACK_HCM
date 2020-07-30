@@ -41,20 +41,24 @@ public class UtilitarioController {
 		try {
 			List<String> messages = new ArrayList<>();
 			List<Modulo> tmp_modulo = new ArrayList<>();
-			Modulo modTrabajador = this.CrearModulo("Trabajador", 1, "mdi mdi-worker", 2, "app.uitrab");
 			Modulo modUsuario = this.CrearModulo("Administracion", 1, "mdi mdi-account", 1, "app.uiadm");
+			Modulo modTrabajador = this.CrearModulo("Trabajador", 1, "mdi mdi-worker", 2, "app.uitrab");
 			Modulo modPlanillas = this.CrearModulo("Planillas", 1, "mdi mdi-clipboard-text", 3, "app.uiplan");
-			Modulo modConfiguracion = this.CrearModulo("Configuracion", 1, "mdi mdi-settings", 5, "app.uiconf");
 			Modulo modContabilidad = this.CrearModulo("Contabilidad", 1, "mdi mdi-pen", 4, "app.uicont");
+			Modulo modEquipo = this.CrearModulo("Equipo", 1, "mdi mdi-account-multiple", 5, "app.uiequi");
+			Modulo modConfiguracion = this.CrearModulo("Configuracion", 1, "mdi mdi-settings", 6, "app.uiconf");
 			tmp_modulo.add(modUsuario);
 			tmp_modulo.add(modTrabajador);
 			tmp_modulo.add(modPlanillas);
-			tmp_modulo.add(modConfiguracion);
 			tmp_modulo.add(modContabilidad);
+			tmp_modulo.add(modEquipo);
+			tmp_modulo.add(modConfiguracion);
 			messages.add(service.insertarDatosModulo(tmp_modulo));
 
 			List<Pagina> tmp_pagina = new ArrayList<>();
 			Pagina gu = this.CrearPagina("Gestion Usuarios", 1, "mdi mdi-shield", 0, "-", "/gestionusuarios",
+					modUsuario);
+			Pagina gpa = this.CrearPagina("Gestion Paginas", 1, "mdi mdi-book-open-page-variant", 0, "-", "/gestionpaginas",
 					modUsuario);
 			Pagina gh = this.CrearPagina("Horarios", 1, "mdi mdi-calendar-clock", 0, "-", "/horarios",
 					modConfiguracion);
@@ -97,7 +101,10 @@ public class UtilitarioController {
 					modPlanillas);
 			Pagina conCue = this.CrearPagina("Conceptos y cuentas", 1, "mdi mdi-account-box", 0, "-", "/conceptoscuentas",
 					modContabilidad);
+			Pagina equi = this.CrearPagina("Gestion Equipo", 1, "mdi mdi-account-search", 0, "-", "/equipo",
+					modEquipo);
 			tmp_pagina.add(gu);
+			tmp_pagina.add(gpa);
 			tmp_pagina.add(gh);
 			tmp_pagina.add(gt);
 			tmp_pagina.add(dh);
@@ -122,6 +129,7 @@ public class UtilitarioController {
 			tmp_pagina.add(asist);
 			tmp_pagina.add(vacas);
 			tmp_pagina.add(conCue);
+			tmp_pagina.add(equi);
 			messages.add(service.insertarDatosPagina(tmp_pagina));
 
 			List<Perfil> tmp_perfil = new ArrayList<>();
