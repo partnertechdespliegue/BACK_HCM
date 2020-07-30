@@ -136,9 +136,11 @@ public class UtilitarioController {
 			Perfil role_admi = this.CrearPerfil(1, true, "ROLE_ADMIN");
 			Perfil admi = this.CrearPerfil(1, true, "Administrador");
 			Perfil trab = this.CrearPerfil(1, true, "Trabajador");
+			Perfil sup = this.CrearPerfil(1, true, "Supervisor");
 			tmp_perfil.add(role_admi);
 			tmp_perfil.add(admi);
 			tmp_perfil.add(trab);
+			tmp_perfil.add(sup);
 			messages.add(service.insertarDatosPerfil(tmp_perfil));
 
 			List<Sctr> tmp_sctr = new ArrayList<>();
