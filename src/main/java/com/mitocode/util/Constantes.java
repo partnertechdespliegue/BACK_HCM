@@ -324,6 +324,9 @@ public class Constantes {
 	// Perfil
 	public static final String msgListarPerfilesOk = "Perfiles listados correctamente";
 	public static final String msgListarPerfilesError = "Error al listar perfiles";
+	
+	public static final String msgListarPaginasOk = "Paginas listadas correctamente";
+	public static final String msgListarPaginasError = "Error al listar Paginas";
 
 	// Tipo Documento
 	public static final String msgListarTipoDocError = "Error al listar tipo documento";
