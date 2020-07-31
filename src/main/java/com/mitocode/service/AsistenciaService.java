@@ -1,6 +1,6 @@
 package com.mitocode.service;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 import com.mitocode.model.Asistencia;
