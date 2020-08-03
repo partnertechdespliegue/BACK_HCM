@@ -344,8 +344,8 @@ public class TrabajadorController {
 		// mailService.enviarMail(trabajador.getCorreo(), asunto, mensaje);
 		mailService.enviarMail("adriantm_1998@hotmail.com", asunto, mensaje);*/
 		
-		EnviarMailThread thread = new EnviarMailThread(mailService);
-		thread.start();
+		//EnviarMailThread thread = new EnviarMailThread(mailService);
+		//thread.start();
 
 		return null;
 	}
