@@ -61,7 +61,7 @@ public class Trabajador {
 	
 	@Length(message="El correo no puede exceder de 80 caracteres", min=0,max=80)
 	@Email(message="El correo debe contener un formato valido")
-	@Column(name = "correo", nullable = true, length = 80)
+	@Column(name = "correo", nullable = false, length = 80)
 	private String correo;
 	
 	@Length(message="El numero de celular debe contener 9 digitos", min=9,max=9)
