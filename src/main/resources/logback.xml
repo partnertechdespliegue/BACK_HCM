@@ -17,9 +17,9 @@
           <!--  <url>jdbc:postgresql://localhost:5432/POSPLAND</url>
             <user>postgres</user>
             <password>admin</password>-->
-          <url>jdbc:postgresql://localhost:5432/POSPLAND</url>
-            <user>postgres</user>
-            <password>admin</password>  
+          <url>jdbc:postgresql://ec2-54-234-44-238.compute-1.amazonaws.com:5432/dbje2h7k6bg9fa</url>
+            <user>ewpgbkadkvtdow</user>
+            <password>70c8ea042b1435d9c851ad083dd443a2da281290a8dd8d1a659072bc0a38d21a</password>  
         </connectionSource>
     </appender>    
 
