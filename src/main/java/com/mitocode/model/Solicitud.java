@@ -37,7 +37,7 @@ public class Solicitud {
 	@Column (name="estado",nullable = false)
 	private Integer iestado;
 	
-	@Column (name="fecha_inicio",nullable = true)
+	@Column (name="fecha_inicio",nullable = false)
 	private Timestamp tfechaInicio;
 
 	public Integer getIidSolicitud() {

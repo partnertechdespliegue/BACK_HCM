@@ -103,6 +103,8 @@ public class UtilitarioController {
 					modContabilidad);
 			Pagina equi = this.CrearPagina("Gestion Equipo", 1, "mdi mdi-account-search", 0, "-", "/equipo",
 					modEquipo);
+			Pagina solic = this.CrearPagina("Solicitud", 1, "mdi mdi-clipboard-alert", 0, "-", "/solicitud",
+					modTrabajador);
 			tmp_pagina.add(gu);
 			tmp_pagina.add(gpa);
 			tmp_pagina.add(gh);
@@ -130,6 +132,7 @@ public class UtilitarioController {
 			tmp_pagina.add(vacas);
 			tmp_pagina.add(conCue);
 			tmp_pagina.add(equi);
+			tmp_pagina.add(solic);
 			messages.add(service.insertarDatosPagina(tmp_pagina));
 
 			List<Perfil> tmp_perfil = new ArrayList<>();
@@ -137,10 +140,12 @@ public class UtilitarioController {
 			Perfil admi = this.CrearPerfil(1, true, "Administrador");
 			Perfil trab = this.CrearPerfil(1, true, "Trabajador");
 			Perfil sup = this.CrearPerfil(1, true, "Supervisor");
+			Perfil rrhh = this.CrearPerfil(1, true, "Gerente de Recursos Humanos");
 			tmp_perfil.add(role_admi);
 			tmp_perfil.add(admi);
 			tmp_perfil.add(trab);
 			tmp_perfil.add(sup);
+			tmp_perfil.add(rrhh);
 			messages.add(service.insertarDatosPerfil(tmp_perfil));
 
 			List<Sctr> tmp_sctr = new ArrayList<>();

@@ -16,15 +16,19 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mitocode.dto.EmpresaDTO;
+import com.mitocode.dto.PuestoDTO;
 import com.mitocode.dto.ResponseWrapper;
 import com.mitocode.dto.SolicitudDTO;
 import com.mitocode.exception.ExceptionResponse;
 import com.mitocode.model.Empresa;
+import com.mitocode.model.ProyeccionPuesto;
+import com.mitocode.model.Puesto;
 import com.mitocode.model.RegimenTributario;
 import com.mitocode.model.Solicitud;
 import com.mitocode.model.Trabajador;
@@ -143,11 +147,7 @@ public class SolicitudController {
 	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 	@PostMapping("/listarPorEmpresa")
 	public ResponseWrapper listarSolicitudxEmpresa(@RequestBody Empresa emp) throws Exception {
-		if (emp.getIdEmpresa() == null) {
-			throw new ExceptionResponse(new Date(), this.getClass().getSimpleName() + "/listarSolicitudxEmpresa",
-					Constantes.msgListarSolicitudxEmpresaVacio + " no se ha especificado una Empresa valida", emp);
-		}
-
+		
 		try {
 			ResponseWrapper response = new ResponseWrapper();
 			List resp = solicitudService.listarxEmpresa(emp);
@@ -193,6 +193,48 @@ public class SolicitudController {
 							+ e.getClass() + " => message: " + e.getMessage() + "=> linea nro: "
 							+ e.getStackTrace()[0].getLineNumber(),
 					id);
+		}
+	}
+	
+	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
+	@PutMapping("/cancelarSolicitud")
+	public ResponseWrapper modificarProyeccionPuesto(@Valid @RequestBody Solicitud solicitud, BindingResult result) throws Exception {
+
+		if (result.hasErrors()) {
+			List<String> errors = result.getFieldErrors().stream().map(err -> {
+				return err.getDefaultMessage();
+			}).collect(Collectors.toList());
+			throw new ExceptionResponse(new Date(), this.getClass().getSimpleName() + "/cancelarSolicitud",
+					"Error en la validacion: Lista de Errores:" + errors.toString(), solicitud);
+		}
+
+		try {
+			ResponseWrapper response = new ResponseWrapper();			
+			//Solicitud sol = solicitudDTO.getSolicitud();
+			//sol.setTrabajador(solicitudDTO.getTrabajador());
+			//sol.setPuesto(solicitudDTO.getPuesto());
+			solicitud.setIestado(Constantes.ConsSolicitudCancelada);
+			solicitud.setTfechaInicio(solicitud.getTfechaInicio());
+								
+			Solicitud respSolicitud = solicitudService.modificar(solicitud);
+			if (respSolicitud != null) {				
+					response.setEstado(Constantes.valTransaccionOk);
+					response.setMsg(Constantes.msgCancelarSolicitudOK);
+					response.setDefaultObj(respSolicitud);
+				} else {
+					response.setEstado(Constantes.valTransaccionError);
+					response.setMsg(Constantes.msgCancelarSolicitudError);
+				}
+			
+			return response;
+		} catch (Exception e) {
+			System.out.println(
+					this.getClass().getSimpleName() + " cancelarSolicitud. ERROR : " + e.getMessage());
+			throw new ExceptionResponse(new Date(), this.getClass().getSimpleName() + "/cancelarSolicitud",
+					e.getStackTrace()[0].getFileName() + " => " + e.getStackTrace()[0].getMethodName() + " => "
+							+ e.getClass() + " => message: " + e.getMessage() + "=> linea nro: "
+							+ e.getStackTrace()[0].getLineNumber(),
+							solicitud);
 		}
 	}
 

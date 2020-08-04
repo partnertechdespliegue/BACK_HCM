@@ -616,13 +616,16 @@ public class Constantes {
 	// Solicitud
 	public static final String msgRegistrarSolicitudError = "Error al insertar Solicitud";
 	public static final String msgRegistrarSolicitudOK = "Solicitud insertada correctamente";
-	public static final String msgListarSolicitudxSupervisorOK = "Solicitud por trabajador listados correctamente";
-	public static final String msgListarSolicitudxSupervisorVacio = "No hay registros";
+	public static final String msgListarSolicitudxSupervisorOK = "Solicitud por trabajador listados correctamente";	
 	public static final String msgListarSolicitudxSupervisorError = "Error al listar Solicitud por trabajador";
 	public static final String msgListarSolicitudxEmpresaOK = "Solicitud por Empresa listados correctamente";
-	public static final String msgListarSolicitudxEmpresaVacio = "No hay registros";
+	public static final String msgListarSolicitudxEmpresaVacio = "Solicitud por Empresa vacia";
 	public static final String msgListarSolicitudxEmpresaError = "Error al listar Solicitud por Empresa";
 	public static final String msgEliminarSolicitudOK = "Solicitud eliminado correctamente";
 	public static final String msgEliminarSolicitudError = "Error al eliminar la Solicitud";
+	public static final String msgCancelarSolicitudOK = "Solicitud cancelada";
+	public static final String msgCancelarSolicitudError = "Error al cancelar la Solicitud";
+	public static final Integer ConsSolicitudCancelada = 0;
+	
 
 }
