@@ -621,5 +621,12 @@ public class Constantes {
 	public static final String msgListarSolicitudxEmpresaError = "Error al listar Solicitud por Empresa";
 	public static final String msgEliminarSolicitudOK = "Solicitud eliminado correctamente";
 	public static final String msgEliminarSolicitudError = "Error al eliminar la Solicitud";
+	
+	
+	
+	//Postulante
+	public static final Integer ConstaEstadoPostulante = 1;
+	public static final String msgRegistrarPostulanteOK = "Postulante registrado correctamente";
+	public static final String msgRegistrarPostulanteError = "Error al registrar al postulante";
 
 }
