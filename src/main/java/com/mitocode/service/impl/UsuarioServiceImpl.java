@@ -18,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.mitocode.model.Afp;
 import com.mitocode.model.Perfil;
+import com.mitocode.model.Trabajador;
 import com.mitocode.model.Usuario;
 import com.mitocode.repo.UsuarioRepo;
 import com.mitocode.service.IUsuarioService;
@@ -29,10 +30,8 @@ public class UsuarioServiceImpl implements UserDetailsService, IUsuarioService{
 	
 	private static final Logger LOG = LoggerFactory.getLogger(UsuarioServiceImpl.class);
 	
-	
 	@Autowired
 	private UsuarioRepo repo;
-	
 	
 	public UsuarioRepo getRepo() {
 		return repo;
@@ -78,6 +77,16 @@ public class UsuarioServiceImpl implements UserDetailsService, IUsuarioService{
 			return repo.findByPerfil(perfil);
 		}catch(Exception e) {
 			LOG.error(this.getClass().getSimpleName()+" buscarPorPerfil. ERROR : "+e.getMessage());
+			throw e;
+		}	
+	}
+	
+	@Override
+	public Usuario findbyTrabajador(Trabajador trabajador) {
+		try {
+			return repo.findByTrabajador(trabajador);
+		}catch(Exception e) {
+			LOG.error(this.getClass().getSimpleName()+" buscarPorTrabajador. ERROR : "+e.getMessage());
 			throw e;
 		}
 		

@@ -27,6 +27,8 @@ import java.util.Arrays;
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
+import javax.mail.internet.InternetAddress;
+
 import org.apache.commons.codec.binary.Base64;
 
 import com.ibm.icu.util.Calendar;
@@ -107,12 +109,25 @@ public class TrabajadorController {
 			return response;
 
 		} catch (Exception e) {
+			System.out.println(e);
+			enviarMailError(e, trabajadorDTO.getTrabajador());
 			System.out.println(this.getClass().getSimpleName() + " registrarTrabajador. ERROR : " + e.getMessage());
 			throw new ExceptionResponse(new Date(), this.getClass().getSimpleName() + "/registrar",
 					e.getStackTrace()[0].getFileName() + " => " + e.getStackTrace()[0].getMethodName() + " => "
 							+ e.getClass() + " => message: " + e.getMessage() + "=> linea nro: "
 							+ e.getStackTrace()[0].getLineNumber(),
 					trabajadorDTO);
+		}
+	}
+
+	private void enviarMailError(Exception e, Trabajador trabajador) {
+		String msgGeneral = e.getCause().getCause().getMessage().toString();
+		if (msgGeneral.indexOf("Ya existe") >= 0) {
+			String[] msgError = e.getCause().getCause().getMessage().toString().split("  ");
+			String msg = msgError[1].replace("Detail:", "Detalle del problema:\n").replace(" Ya", "Ya")
+					.replace("la llave", "un registro con el").replace("(", "").replace(")", "").replace("=", " ");
+			EnviarMailThread thread = new EnviarMailThread(mailService, trabajador, msg, 0);
+			thread.start();
 		}
 	}
 
@@ -163,24 +178,12 @@ public class TrabajadorController {
 		usuario.setEmpresa(trabajador.getEmpresa());
 		Usuario resp_user = serviceUsuario.registrar(usuario);
 		if (resp_user != null) {
-			/*if (resp_user.getEmail() != null) {
-				enviarMailCredenciales(trabajador, usuario);
-			}*/
-			
 			EnviarMailThread thread = new EnviarMailThread(mailService, trabajador, usuario, 1);
 			thread.start();
 			return true;
 		} else {
 			return false;
 		}
-	}
-
-	private void enviarMailCredenciales(Trabajador trabajador, Usuario usuario) {
-		String asunto = "Credenciales aplicación PLANTEC";
-		String mensaje = "Bienvenido " + trabajador.getNombres().toUpperCase() + "\n\n"
-				+ "Puede acceder a la aplicación móvil de la empresa con las siguientes credenciales." + "\n\nUsuario: "
-				+ usuario.getUsername() + "\nContraseña: 12345";
-		mailService.enviarMail(trabajador.getCorreo(), asunto, mensaje);
 	}
 
 	private String obtenerUsername(Trabajador trabajador) {
@@ -265,16 +268,32 @@ public class TrabajadorController {
 			tmp_contra.setTipoPago(trabajadorDTO.getTipoPago());
 			tmp_contra.setTrabajador(trabajadorDTO.getTrabajador());
 
-			String password = armarPassword(tmp_trabajador);
-
 			res_traba = serviceTrabajador.modificar(tmp_trabajador);
 			if (res_traba != null) {
 				Contrato res_contra = new Contrato();
 				res_contra = serviceContrato.modificar(encriptarContrato(tmp_contra));
 				if (res_contra != null) {
-					response.setEstado(Constantes.valTransaccionOk);
-					response.setMsg(Constantes.msgModificarTrabajadorOK);
-					response.setDefaultObj(res_traba);
+					Usuario usuario = serviceUsuario.findbyTrabajador(res_traba);
+					if (!usuario.getEmail().equals(res_traba.getCorreo())) {
+						Usuario usuarioAnt = new Usuario();
+						usuarioAnt.setEmail(usuario.getEmail());
+						usuario.setEmail(res_traba.getCorreo());
+						if (serviceUsuario.modificar(usuario) != null) {
+							EnviarMailThread thread = new EnviarMailThread(mailService, res_traba, usuarioAnt, 2);
+							thread.start();
+							response.setEstado(Constantes.valTransaccionOk);
+							response.setMsg(Constantes.msgModificarTrabajadorOK);
+							response.setDefaultObj(res_traba);
+						} else {
+							response.setEstado(Constantes.valTransaccionError);
+							response.setMsg(Constantes.msgActualizarUsuarioError);
+						}
+					} else {
+						response.setEstado(Constantes.valTransaccionOk);
+						response.setMsg(Constantes.msgModificarTrabajadorOK);
+						response.setDefaultObj(res_traba);
+					}
+
 				} else {
 					response.setEstado(Constantes.valTransaccionError);
 					response.setMsg(Constantes.msgModificarTrabajadorError);
@@ -293,6 +312,7 @@ public class TrabajadorController {
 					trabajadorDTO);
 		}
 	}
+	
 
 	@Secured({ "ROLE_ADMIN" })
 	@PostMapping("/porEmpresa") // noseusa
@@ -324,30 +344,6 @@ public class TrabajadorController {
 							+ e.getStackTrace()[0].getLineNumber(),
 					empresa);
 		}
-	}
-
-	@GetMapping("/enviarMail") // noseusa
-	public ResponseWrapper enviarMail() throws Exception {
-
-	/*	String asunto = "Credenciales";
-		String mensaje = "<p>" + "<span>Estimados:&#160;" + "HOLA" + "<p>" + "<span>"
-				+ "Le enviamos el resumen del documento generado" + "</span>" + "<br/>" + "</p>" + "<ul>"
-//					+ "<li style='text-transform:uppercase;font-weight:bold'>" + subject + "</li>"
-				+ "<li>Fecha de emisión : <label style=' font-weight:bold'>" + "HOLA" + "</label></li>"
-//					+ "<li>Fecha de vencimiento : <label style=' font-weight:bold'>"+ fech_venc +"</label></li>"
-				+ "<li>Total : <label style=' font-weight:bold'>" + "HOLA" + "</label></li>"
-				+ "<li>Tipo de cambio : <label style=' font-weight:bold'>" + "HOLA" + "</label></li>"
-				+ "<li>Monto transferido al cambio: <label style=' font-weight:bold'>" + "HOLA" + "</label></li>"
-				+ "<li>Observaciones : <label style=' font-weight:bold'>" + "HOLA" + "</label></li>" + "</ul>"
-				+ "</span>" + "</p>";
-		;
-		// mailService.enviarMail(trabajador.getCorreo(), asunto, mensaje);
-		mailService.enviarMail("adriantm_1998@hotmail.com", asunto, mensaje);*/
-		
-		//EnviarMailThread thread = new EnviarMailThread(mailService);
-		//thread.start();
-
-		return null;
 	}
 
 	// @Secured({ "ROLE_ADMIN" })
