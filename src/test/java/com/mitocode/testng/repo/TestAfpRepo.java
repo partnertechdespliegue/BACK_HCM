@@ -1,6 +1,6 @@
 package com.mitocode.testng.repo;
 
-import static org.junit.Assert.*;
+import static org.testng.Assert.*;
 
 import java.util.List;
 
@@ -16,7 +16,6 @@ import com.mitocode.model.Afp;
 import com.mitocode.model.Empresa;
 import com.mitocode.repo.AfpRepo;
 import com.mitocode.util.DataDuroComplementos;
-
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -56,7 +55,7 @@ public class TestAfpRepo extends AbstractTestNGSpringContextTests{
 		afp_repo.deleteById(afp.getIdAfp());
 		Boolean resp = afp_repo.existsById(afp.getIdAfp());
 		
-		assertEquals(false, resp);
+		assertTrue(resp);
 	}
 	
 

@@ -1,8 +1,7 @@
 package com.mitocode.testng.serviceimpl;
 
 
-import static org.junit.Assert.assertTrue;
-import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.*;
 
 import java.util.List;
 

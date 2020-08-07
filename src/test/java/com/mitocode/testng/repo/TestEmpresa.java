@@ -14,7 +14,6 @@ import com.mitocode.model.Empresa;
 import com.mitocode.repo.EmpresaRepo;
 import com.mitocode.util.DataDuroComplementos;
 
-
 @SpringBootTest
 public class TestEmpresa extends AbstractTestNGSpringContextTests{
 	
