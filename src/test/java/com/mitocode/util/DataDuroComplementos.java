@@ -11,10 +11,12 @@ import com.mitocode.dto.EmpresaDTO;
 import com.mitocode.dto.Planilla;
 import com.mitocode.dto.PlanillaDTO;
 import com.mitocode.dto.Reporte;
+import com.mitocode.dto.SolicitudDTO;
 import com.mitocode.dto.TipoPlanillaDTO;
 import com.mitocode.dto.TrabajadorDTO;
 import com.mitocode.model.AdelantoSueldo;
 import com.mitocode.model.Afp;
+import com.mitocode.model.AreaDepartamentoEmpresa;
 import com.mitocode.model.Asistencia;
 import com.mitocode.model.Banco;
 /*import com.mitocode.dto.CategoriaDTO;
@@ -25,6 +27,7 @@ import com.mitocode.model.Contrato;
 import com.mitocode.model.CuentaCargo;
 import com.mitocode.model.CuotaAdelanto;
 import com.mitocode.model.Departamento;
+import com.mitocode.model.DepartamentoEmpresa;
 import com.mitocode.model.DerechoHabientes;
 import com.mitocode.model.Descuentos;
 import com.mitocode.model.Distrito;
@@ -43,12 +46,14 @@ import com.mitocode.model.Perfil;
 import com.mitocode.model.Permiso;
 import com.mitocode.model.PlanillaHistorico;
 import com.mitocode.model.Provincia;
+import com.mitocode.model.Puesto;
 import com.mitocode.model.RegSalud;
 import com.mitocode.model.RegimenLaboral;
 import com.mitocode.model.RegimenTributario;
 import com.mitocode.model.Rhe;
 import com.mitocode.model.Sctr;
 import com.mitocode.model.Situacion;
+import com.mitocode.model.Solicitud;
 import com.mitocode.model.TipoContrato;
 import com.mitocode.model.TipoDoc;
 import com.mitocode.model.TipoEmpresa;
@@ -62,6 +67,60 @@ import com.mitocode.model.Trabajador;
 import com.mitocode.model.Usuario;
 
 public class DataDuroComplementos {
+	
+	public SolicitudDTO nuevaSolicitudDTO() {
+		SolicitudDTO dto = new SolicitudDTO();
+		
+		Trabajador trabajador = nuevoTrabajador();
+		trabajador.setIdTrabajador(1);
+		Puesto puesto = nuevoPuesto();
+		puesto.setIidPuesto(1);
+		Empresa empresa = nuevaEmpresa();
+		empresa.setIdEmpresa(1);
+		
+		dto.setTrabajador(trabajador);
+		dto.setPuesto(puesto);
+		dto.setSolicitud(nuevaSolicitud());
+		
+		return dto;
+	}
+	
+	public Solicitud nuevaSolicitud() {
+		Solicitud solicitud = new Solicitud();
+		solicitud.setDbanda(10.0);
+		solicitud.setSmotivos("Porque si");
+		
+		return solicitud;
+	}
+	
+	public Puesto nuevoPuesto() {
+		Puesto puesto = new Puesto();
+		puesto.setSnombre("Puesto A");
+		puesto.setIestado(1);
+		puesto.setScategoria("M");
+		AreaDepartamentoEmpresa areaDepartamentoEmpresa = this.nuevaAreaDepartamentoEmpresa();
+		areaDepartamentoEmpresa.setIidAreaDepartamentoEmpresa(1);
+		puesto.setAreaDepartamentoEmpresa(areaDepartamentoEmpresa);		
+		return puesto;
+	}
+	
+	public AreaDepartamentoEmpresa nuevaAreaDepartamentoEmpresa() {
+		AreaDepartamentoEmpresa area = new AreaDepartamentoEmpresa();
+		area.setSnombre("Area A");
+		area.setIestado(1);
+		DepartamentoEmpresa departamentoEmpresa = this.nuevoDepartamentoEmpresa();
+		departamentoEmpresa.setIidDepartamentoEmpresa(1);
+		area.setDepartamentoEmpresa(departamentoEmpresa);
+		return area;
+	}
+	
+	
+	public DepartamentoEmpresa nuevoDepartamentoEmpresa() {
+		DepartamentoEmpresa departamento = new DepartamentoEmpresa();
+		departamento.setSnombre("Departamento A");
+		departamento.setIestado(1);
+		return departamento;
+	}
 
 	public EmpresaDTO nuevaEmpresaDTO() {
 		EmpresaDTO empDTO = new EmpresaDTO();

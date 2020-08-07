@@ -198,25 +198,25 @@ public class TrabajadorController {
 				+ trabajador.getApeMater().substring(0, 1) + sdia).toUpperCase();
 		Usuario buscar_repetido = serviceUsuario.findbyUsername(username);
 		if (buscar_repetido != null) {
-			username = trabajador.getNombres().substring(0, 1) + trabajador.getApePater()
-					+ trabajador.getApeMater().substring(0, 2) + sdia;
+			username = (trabajador.getNombres().substring(0, 1) + trabajador.getApePater()
+					+ trabajador.getApeMater().substring(0, 2) + sdia).toUpperCase();
 			Usuario buscar_repetido2 = serviceUsuario.findbyUsername(username);
 			if (buscar_repetido2 != null) {
-				username = trabajador.getNombres().substring(0, 2) + trabajador.getApePater()
-						+ trabajador.getApeMater().substring(0, 2) + sdia;
+				username = (trabajador.getNombres().substring(0, 2) + trabajador.getApePater()
+						+ trabajador.getApeMater().substring(0, 2) + sdia).toUpperCase();
 				Usuario buscar_repetido3 = serviceUsuario.findbyUsername(username);
 				if (buscar_repetido3 != null) {
-					username = trabajador.getNombres().substring(0, 2) + trabajador.getApePater()
-							+ trabajador.getApeMater().substring(0, 2) + sdia + smes;
-					return username;
+					username = (trabajador.getNombres().substring(0, 2) + trabajador.getApePater()
+							+ trabajador.getApeMater().substring(0, 2) + sdia + smes).toUpperCase();
+					return username.replace(" ", "").replace("  ", "");
 				} else {
-					return username;
+					return username.replace(" ", "").replace("  ", "");
 				}
 			} else {
-				return username;
+				return username.replace(" ", "").replace("  ", "");
 			}
 		} else {
-			return username;
+			return username.replace(" ", "").replace("  ", "");
 		}
 	}
 
