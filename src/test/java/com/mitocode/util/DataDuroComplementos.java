@@ -132,7 +132,7 @@ public class DataDuroComplementos {
 		empDTO.setDescuentos(this.nuevoDescuento());
 		empDTO.setEncargadoPlanilla(this.nuevoEncargadoPlanilla());
 		empDTO.setAfp(this.nuevoAfp());
-		empDTO.setTipoEmpresa(this.nuevoTipoEmpresa());
+		//empDTO.setTipoEmpresa(this.nuevoTipoEmpresa());
 		empDTO.setRegTributario(this.nuevoRegimenTributario());
 		empDTO.setTipoPermiso(this.nuevoTipoPermiso());
 		return empDTO;
@@ -669,7 +669,7 @@ public class DataDuroComplementos {
 		//emp.setFechaRegistro(fecha);
 		emp.setEstado(1);
 		emp.setUbicacion("av malachosky 123");
-		emp.setTipoEmp(this.nuevoTipoEmpresa());
+		//emp.setTipoEmp(this.nuevoTipoEmpresa());
 		emp.setRegTrib(this.nuevoRegimenTributario());
 		return emp;
 	}
@@ -710,7 +710,7 @@ public class DataDuroComplementos {
 	public RegimenTributario nuevoRegimenTributario() { // READY
 		RegimenTributario regTri = new RegimenTributario();
 		regTri.setIdRegTrib(1);
-		regTri.setDescripcion("NRUS - Nuevo Régimen Único Simplificado");
+		regTri.setDescripcion("MICROEMPRESA");
 		return regTri;
 	}
 

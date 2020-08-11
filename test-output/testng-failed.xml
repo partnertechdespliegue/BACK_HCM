@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mitocode.testng.controller.SolicitudControllerTest">
+      <class name="com.mitocode.testng.controller.TestEmpresaController">
         <methods>
-          <include name="listarSolicitudxEmpresaTest"/>
           <include name="springTestContextBeforeTestClass"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestClass"/>
-          <include name="listarSolicitudxEmpresaTestError"/>
           <include name="springTestContextBeforeTestMethod"/>
+          <include name="testRegistrarEmpresa"/>
           <include name="springTestContextAfterTestMethod"/>
+          <include name="testEliminarEmpresa"/>
         </methods>
-      </class> <!-- com.mitocode.testng.controller.SolicitudControllerTest -->
+      </class> <!-- com.mitocode.testng.controller.TestEmpresaController -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,205 +1,206 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="0" skipped="2">
+<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-07T09:19:42 PET" name="Default suite" finished-at="2020-08-07T09:20:00 PET" duration-ms="18255">
+  <suite started-at="2020-08-07T13:41:09 PET" name="Default suite" finished-at="2020-08-07T13:42:43 PET" duration-ms="93800">
     <groups>
     </groups>
-    <test started-at="2020-08-07T09:19:42 PET" name="Default test" finished-at="2020-08-07T09:20:00 PET" duration-ms="18255">
-      <class name="com.mitocode.testng.controller.SolicitudControllerTest">
-        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:com.mitocode.testng.controller.SolicitudControllerTest@7fc6de5b]" started-at="2020-08-07T09:19:42 PET" name="springTestContextBeforeTestClass" finished-at="2020-08-07T09:19:42 PET" duration-ms="11" status="PASS">
+    <test started-at="2020-08-07T13:41:09 PET" name="Default test" finished-at="2020-08-07T13:42:43 PET" duration-ms="93800">
+      <class name="com.mitocode.testng.controller.TestEmpresaController">
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:41:09 PET" name="springTestContextBeforeTestClass" finished-at="2020-08-07T13:41:09 PET" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.mitocode.testng.controller.SolicitudControllerTest@7fc6de5b]" started-at="2020-08-07T09:19:42 PET" name="springTestContextPrepareTestInstance" finished-at="2020-08-07T09:20:00 PET" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="18135" status="FAIL">
-          <exception class="org.springframework.beans.factory.UnsatisfiedDependencyException">
-            <message>
-              <![CDATA[Error creating bean with name 'com.mitocode.testng.controller.SolicitudControllerTest': Unsatisfied dependency expressed through field 'result'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.validation.BindingResult' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.mitocode.testng.controller.SolicitudControllerTest': Unsatisfied dependency expressed through field 'result'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.validation.BindingResult' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
-at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
-at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
-at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
-at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:391)
-at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119)
-at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
-at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
-at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextPrepareTestInstance(AbstractTestNGSpringContextTests.java:145)
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.validation.BindingResult' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1654)
-at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1213)
-at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
-at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
-... 8 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.springframework.beans.factory.UnsatisfiedDependencyException -->
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:41:09 PET" name="springTestContextPrepareTestInstance" finished-at="2020-08-07T13:41:28 PET" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="18652" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.mitocode.testng.controller.SolicitudControllerTest@7fc6de5b]" started-at="2020-08-07T09:20:00 PET" name="springTestContextBeforeTestMethod" finished-at="2020-08-07T09:20:00 PET" duration-ms="29" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:41:28 PET" name="springTestContextBeforeTestMethod" finished-at="2020-08-07T13:41:28 PET" duration-ms="17" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.mitocode.testng.controller.SolicitudControllerTest.listarSolicitudxEmpresaTest() throws java.lang.Exception]]>
+                <![CDATA[public void com.mitocode.testng.controller.TestEmpresaController.testRegistrarEmpresa() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="listarSolicitudxEmpresaTest()[pri:0, instance:com.mitocode.testng.controller.SolicitudControllerTest@7fc6de5b]" started-at="2020-08-07T09:20:00 PET" name="listarSolicitudxEmpresaTest" finished-at="2020-08-07T09:20:00 PET" duration-ms="0" status="SKIP">
-          <exception class="org.springframework.beans.factory.UnsatisfiedDependencyException">
+        <test-method signature="testRegistrarEmpresa()[pri:0, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:41:28 PET" name="testRegistrarEmpresa" finished-at="2020-08-07T13:42:38 PET" duration-ms="70315" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Error creating bean with name 'com.mitocode.testng.controller.SolicitudControllerTest': Unsatisfied dependency expressed through field 'result'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.validation.BindingResult' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}]]>
+              <![CDATA[expected [null] but found [com.mitocode.model.Empresa@28d38288]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.mitocode.testng.controller.SolicitudControllerTest': Unsatisfied dependency expressed through field 'result'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.validation.BindingResult' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
-at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
-at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
-at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
-at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:391)
-at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119)
-at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
-at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
-at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextPrepareTestInstance(AbstractTestNGSpringContextTests.java:145)
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.validation.BindingResult' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1654)
-at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1213)
-at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
-at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
-... 8 more
+              <![CDATA[java.lang.AssertionError: expected [null] but found [com.mitocode.model.Empresa@28d38288]
+at com.mitocode.testng.controller.TestEmpresaController.testRegistrarEmpresa(TestEmpresaController.java:41)
+at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:180)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.springframework.beans.factory.UnsatisfiedDependencyException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- listarSolicitudxEmpresaTest -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.mitocode.testng.controller.SolicitudControllerTest@7fc6de5b]" started-at="2020-08-07T09:20:00 PET" name="springTestContextAfterTestMethod" finished-at="2020-08-07T09:20:00 PET" duration-ms="0" status="PASS">
+        </test-method> <!-- testRegistrarEmpresa -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:42:38 PET" name="springTestContextAfterTestMethod" finished-at="2020-08-07T13:42:38 PET" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.mitocode.testng.controller.SolicitudControllerTest.listarSolicitudxEmpresaTest() throws java.lang.Exception]]>
+                <![CDATA[public void com.mitocode.testng.controller.TestEmpresaController.testRegistrarEmpresa() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.mitocode.testng.controller.SolicitudControllerTest@7fc6de5b]" started-at="2020-08-07T09:20:00 PET" name="springTestContextBeforeTestMethod" finished-at="2020-08-07T09:20:00 PET" duration-ms="3" status="FAIL">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:42:38 PET" name="springTestContextBeforeTestMethod" finished-at="2020-08-07T13:42:38 PET" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.mitocode.testng.controller.SolicitudControllerTest.listarSolicitudxEmpresaTestError() throws java.lang.Exception]]>
+                <![CDATA[public void com.mitocode.testng.controller.TestEmpresaController.testModificarEmpresa() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
-          <exception class="org.springframework.beans.factory.UnsatisfiedDependencyException">
-            <message>
-              <![CDATA[Error creating bean with name 'com.mitocode.testng.controller.SolicitudControllerTest': Unsatisfied dependency expressed through field 'result'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.validation.BindingResult' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.mitocode.testng.controller.SolicitudControllerTest': Unsatisfied dependency expressed through field 'result'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.validation.BindingResult' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
-at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
-at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
-at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
-at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:391)
-at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119)
-at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.beforeTestMethod(DependencyInjectionTestExecutionListener.java:99)
-at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:291)
-at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestMethod(AbstractTestNGSpringContextTests.java:157)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:523)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.validation.BindingResult' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1654)
-at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1213)
-at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
-at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
-... 40 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.springframework.beans.factory.UnsatisfiedDependencyException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method signature="listarSolicitudxEmpresaTestError()[pri:0, instance:com.mitocode.testng.controller.SolicitudControllerTest@7fc6de5b]" started-at="2020-08-07T09:20:00 PET" name="listarSolicitudxEmpresaTestError" finished-at="2020-08-07T09:20:00 PET" duration-ms="0" status="SKIP">
-          <exception class="org.springframework.beans.factory.UnsatisfiedDependencyException">
-            <message>
-              <![CDATA[Error creating bean with name 'com.mitocode.testng.controller.SolicitudControllerTest': Unsatisfied dependency expressed through field 'result'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.validation.BindingResult' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.mitocode.testng.controller.SolicitudControllerTest': Unsatisfied dependency expressed through field 'result'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.validation.BindingResult' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
-at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
-at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
-at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
-at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:391)
-at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119)
-at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
-at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
-at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextPrepareTestInstance(AbstractTestNGSpringContextTests.java:145)
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.validation.BindingResult' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1654)
-at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1213)
-at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
-at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
-... 8 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.springframework.beans.factory.UnsatisfiedDependencyException -->
+        <test-method signature="testModificarEmpresa()[pri:1, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:42:38 PET" name="testModificarEmpresa" finished-at="2020-08-07T13:42:41 PET" duration-ms="3109" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- listarSolicitudxEmpresaTestError -->
-        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.mitocode.testng.controller.SolicitudControllerTest@7fc6de5b]" started-at="2020-08-07T09:20:00 PET" name="springTestContextAfterTestMethod" finished-at="2020-08-07T09:20:00 PET" duration-ms="2" status="PASS">
+        </test-method> <!-- testModificarEmpresa -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:42:41 PET" name="springTestContextAfterTestMethod" finished-at="2020-08-07T13:42:41 PET" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.mitocode.testng.controller.SolicitudControllerTest.listarSolicitudxEmpresaTestError() throws java.lang.Exception]]>
+                <![CDATA[public void com.mitocode.testng.controller.TestEmpresaController.testModificarEmpresa() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:com.mitocode.testng.controller.SolicitudControllerTest@7fc6de5b]" started-at="2020-08-07T09:20:00 PET" name="springTestContextAfterTestClass" finished-at="2020-08-07T09:20:00 PET" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:42:41 PET" name="springTestContextBeforeTestMethod" finished-at="2020-08-07T13:42:41 PET" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.mitocode.testng.controller.TestEmpresaController.testListarEmpresa() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method signature="testListarEmpresa()[pri:2, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:42:41 PET" name="testListarEmpresa" finished-at="2020-08-07T13:42:41 PET" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListarEmpresa -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:42:41 PET" name="springTestContextAfterTestMethod" finished-at="2020-08-07T13:42:41 PET" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.mitocode.testng.controller.TestEmpresaController.testListarEmpresa() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:42:41 PET" name="springTestContextBeforeTestMethod" finished-at="2020-08-07T13:42:41 PET" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.mitocode.testng.controller.TestEmpresaController.testEliminarEmpresa() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method signature="testEliminarEmpresa()[pri:3, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:42:41 PET" name="testEliminarEmpresa" finished-at="2020-08-07T13:42:43 PET" duration-ms="1626" status="FAIL">
+          <exception class="org.springframework.dao.DataIntegrityViolationException">
+            <message>
+              <![CDATA[could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:296)
+at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253)
+at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:536)
+at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746)
+at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714)
+at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:127)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533)
+at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304)
+at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+at com.mitocode.controller.EmpresaController$$EnhancerBySpringCGLIB$$7aacf54d.eliminar(<generated>)
+at com.mitocode.testng.controller.TestEmpresaController.testEliminarEmpresa(TestEmpresaController.java:63)
+at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:180)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:112)
+at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)
+at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3358)
+at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3231)
+at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3632)
+at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:146)
+at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478)
+at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356)
+at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1453)
+at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:510)
+at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3282)
+at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2478)
+at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473)
+at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178)
+at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39)
+at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271)
+at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:104)
+at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:532)
+... 16 more
+Caused by: org.postgresql.util.PSQLException: ERROR: el valor null para la columna «id_puesto» viola la restricción not null
+  Detail: La fila que falla contiene (1, 10, 1, Porque si, 2020-08-06 16:51:52.081, null, 1).
+at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440)
+at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183)
+at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:308)
+at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:143)
+at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:120)
+at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)
+... 34 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.springframework.dao.DataIntegrityViolationException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEliminarEmpresa -->
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:42:43 PET" name="springTestContextAfterTestClass" finished-at="2020-08-07T13:42:43 PET" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->
-      </class> <!-- com.mitocode.testng.controller.SolicitudControllerTest -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:42:43 PET" name="springTestContextAfterTestMethod" finished-at="2020-08-07T13:42:43 PET" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.mitocode.testng.controller.TestEmpresaController.testEliminarEmpresa() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+      </class> <!-- com.mitocode.testng.controller.TestEmpresaController -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
