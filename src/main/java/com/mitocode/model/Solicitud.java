@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -37,8 +38,13 @@ public class Solicitud {
 	@Column (name="estado",nullable = false)
 	private Integer iestado;
 	
-	@Column (name="fecha_inicio",nullable = true)
+	@Column (name="fecha_inicio",nullable = false)
 	private Timestamp tfechaInicio;
+	
+	@OneToOne
+	@JoinColumn(name="id_reclutamiento", nullable=true)
+	private Reclutamiento reclutamiento;
+	
 
 	public Integer getIidSolicitud() {
 		return iidSolicitud;
@@ -95,6 +101,14 @@ public class Solicitud {
 	public void setTfechaInicio(Timestamp tfechaInicio) {
 		this.tfechaInicio = tfechaInicio;
 	}
+
+	public Reclutamiento getReclutamiento() {
+		return reclutamiento;
+	}
+
+	public void setReclutamiento(Reclutamiento reclutamiento) {
+		this.reclutamiento = reclutamiento;
+	}
 	
-	
+		
 }

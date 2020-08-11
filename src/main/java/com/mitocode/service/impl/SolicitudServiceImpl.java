@@ -31,7 +31,12 @@ public class SolicitudServiceImpl implements SolicitudService {
 	@Override
 	public Solicitud modificar(Solicitud obj) {
 		
-		return null;
+		try {
+			return repo.save(obj);
+		} catch (Exception e) {
+			LOG.error(this.getClass().getSimpleName() + " modificarSolicitud. ERROR : " + e.getMessage());
+			throw e;
+		}
 	}
 
 	@Override
@@ -85,6 +90,6 @@ public class SolicitudServiceImpl implements SolicitudService {
 			throw e;
 		}
 	}
-	
+
 
 }

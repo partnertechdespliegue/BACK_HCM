@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -20,12 +21,36 @@
             <param index="0">
               <value>
                 <![CDATA[public void com.mitocode.testng.controller.TestEmpresaController.testRegistrarEmpresa() throws java.lang.Exception]]>
+=======
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="43260" started-at="2020-08-07T14:17:36 COT" finished-at="2020-08-07T14:18:19 COT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="43260" started-at="2020-08-07T14:17:36 COT" finished-at="2020-08-07T14:18:19 COT">
+      <class name="com.mitocode.controller.PostulanteControllerTestPI">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.mitocode.controller.PostulanteControllerTestPI@df6620a]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="58" started-at="2020-08-07T14:17:36 COT" finished-at="2020-08-07T14:17:36 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.mitocode.controller.PostulanteControllerTestPI@df6620a]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="42680" started-at="2020-08-07T14:17:36 COT" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2020-08-07T14:18:19 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.mitocode.controller.PostulanteControllerTestPI@df6620a]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="46" started-at="2020-08-07T14:18:19 COT" finished-at="2020-08-07T14:18:19 COT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.mitocode.controller.PostulanteControllerTestPI.registrarTest() throws java.lang.Exception]]>
+>>>>>>> origin/Diana
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
+<<<<<<< HEAD
         <test-method signature="testRegistrarEmpresa()[pri:0, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:41:28 PET" name="testRegistrarEmpresa" finished-at="2020-08-07T13:42:38 PET" duration-ms="70315" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
@@ -46,12 +71,24 @@ at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(
             <param index="0">
               <value>
                 <![CDATA[public void com.mitocode.testng.controller.TestEmpresaController.testRegistrarEmpresa() throws java.lang.Exception]]>
+=======
+        <test-method status="PASS" signature="registrarTest()[pri:0, instance:com.mitocode.controller.PostulanteControllerTestPI@df6620a]" name="registrarTest" duration-ms="396" started-at="2020-08-07T14:18:19 COT" finished-at="2020-08-07T14:18:19 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrarTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.mitocode.controller.PostulanteControllerTestPI@df6620a]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2020-08-07T14:18:19 COT" finished-at="2020-08-07T14:18:19 COT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.mitocode.controller.PostulanteControllerTestPI.registrarTest() throws java.lang.Exception]]>
+>>>>>>> origin/Diana
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.mitocode.testng.controller.TestEmpresaController@5aa360ea]" started-at="2020-08-07T13:42:38 PET" name="springTestContextBeforeTestMethod" finished-at="2020-08-07T13:42:38 PET" duration-ms="1" status="PASS">
           <params>
             <param index="0">
@@ -201,6 +238,13 @@ at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSe
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
       </class> <!-- com.mitocode.testng.controller.TestEmpresaController -->
+=======
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.mitocode.controller.PostulanteControllerTestPI@df6620a]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2020-08-07T14:18:19 COT" finished-at="2020-08-07T14:18:19 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- com.mitocode.controller.PostulanteControllerTestPI -->
+>>>>>>> origin/Diana
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
