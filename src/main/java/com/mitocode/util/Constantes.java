@@ -626,7 +626,18 @@ public class Constantes {
 
 	public static final String msgCancelarSolicitudOK = "Solicitud cancelada";
 	public static final String msgCancelarSolicitudError = "Error al cancelar la Solicitud";
+	public static final String msgSolicitudRevisionOK = "Se cambio el estado de la solicitud a Revisión";
+	public static final String msgSolicitudRevisionError = "Error al cambiar el estado de la solicitud a Revisión";
+	public static final String msgSolicitudAprobadaOK = "Se cambio el estado de la solicitud a Aprobada";
+	public static final String msgSolicitudAprobadaError = "Error al cambiar el estado de la solicitud a Aprobada";
+	public static final String msgSolicitudRechazadaOK = "Se cambio el estado de la solicitud a Rechazada";
+	public static final String msgSolicitudRechazadaError = "Error al cambiar el estado de la solicitud a Rechazada";
+	public static final String msgSolicitudEstadoError = "Error al cambiar el estado de la solicitud";
+
 	public static final Integer ConsSolicitudCancelada = 0;
+	public static final Integer ConsSolicitudRevision = 2;
+	public static final Integer ConsSolicitudAprobada = 3;
+	public static final Integer ConsSolicitudRechazada = -1;
 		
 	//Postulante
 	public static final Integer ConstaEstadoPostulante = 1;

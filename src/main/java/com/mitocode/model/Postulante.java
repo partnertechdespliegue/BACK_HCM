@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -58,7 +60,7 @@ public class Postulante {
 	@Column(name = "tiempo_experiencia", nullable = false)
 	private Integer tiempo_experiencia;
 	
-	@Column(name = "unidad_tiempo", nullable = false, length = 1)
+	@Column(name = "unidad_tiempo", nullable = true, length = 1)
 	private String unidad_tiempo;
 	
 	@Column(name="pretension", nullable = false)
@@ -81,7 +83,11 @@ public class Postulante {
 	@Column(name = "estado", nullable = false)
 	private Integer estado;
 	
-	//FIXME falta agregar id_reclutamiento
+	@JsonIgnore
+	@ManyToOne
+	@JoinColumn(name="id_reclutamiento", nullable=false)
+	private Reclutamiento reclutamiento;
+
 
 	public Integer getId_postulante() {
 		return id_postulante;
@@ -215,6 +221,14 @@ public class Postulante {
 
 	public void setEstado(Integer estado) {
 		this.estado = estado;
+	}
+
+	public Reclutamiento getReclutamiento() {
+		return reclutamiento;
+	}
+
+	public void setReclutamiento(Reclutamiento reclutamiento) {
+		this.reclutamiento = reclutamiento;
 	}
 
 	

@@ -10,6 +10,7 @@ import com.mitocode.dto.CuentaCargoDTO;
 import com.mitocode.dto.EmpresaDTO;
 import com.mitocode.dto.Planilla;
 import com.mitocode.dto.PlanillaDTO;
+import com.mitocode.dto.PostulanteDTO;
 import com.mitocode.dto.Reporte;
 import com.mitocode.dto.TipoPlanillaDTO;
 import com.mitocode.dto.TrabajadorDTO;
@@ -42,6 +43,7 @@ import com.mitocode.model.PdoMes;
 import com.mitocode.model.Perfil;
 import com.mitocode.model.Permiso;
 import com.mitocode.model.PlanillaHistorico;
+import com.mitocode.model.Postulante;
 import com.mitocode.model.Provincia;
 import com.mitocode.model.RegSalud;
 import com.mitocode.model.RegimenLaboral;
@@ -1139,5 +1141,43 @@ public class DataDuroComplementos {
 		banco.setIdBanco(2);
 		banco.setDescripcion("BANCO DE CREDITO DEL PERU");
 		return banco;
+	}
+	
+	public PostulanteDTO nuevoPostulanteDTO() {
+		PostulanteDTO postDto = new PostulanteDTO();
+		
+		Ocupacion ocup = nuevoOcupacion();
+		ocup.setIdOcupacion(1);		
+		NivelEdu nivE = nuevoNivelEdu();
+		nivE.setIdNivelEdu(1);
+		TipoDoc tipDoc = nuevoTipoDoc();
+		tipDoc.setIdTipoDoc(1);
+		
+		Postulante pos = nuevoPostulante();
+		pos.setEstado(1);		
+		postDto.setPostulante(pos);		
+		postDto.setTipoDoc(tipDoc);
+		postDto.setOcupacion(ocup);
+		postDto.setNivelEdu(nivE);
+		
+		return postDto;
+	}
+	
+	public Postulante nuevoPostulante() {
+		Postulante post = new Postulante();
+					
+		post.setNombres("Diana");
+		post.setApe_paterno("Choque");
+		post.setApe_materno("Torres");
+		post.setFecha_nacimiento(new Timestamp(new Date().getTime()));
+		post.setNro_documento(79854125);
+		post.setTelefono(985625874);
+		post.setCorreo("d@gmail.com");
+		post.setTiempo_experiencia(2);
+		post.setUnidad_tiempo("A");
+		post.setPretension(1500.00);
+		post.setComentarios("adsadas");
+		//post.setEstado(1);
+		return post;
 	}
 }

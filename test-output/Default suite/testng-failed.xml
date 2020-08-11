@@ -3,36 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.mitocode.repo.FaltasRepoTest">
+      <class name="com.mitocode.controller.PostulanteControllerTestPI">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
-          <include name="existsByFechaAndTrabajadorTest"/>
+          <include name="registrarTest"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestClass"/>
           <include name="springTestContextBeforeTestMethod"/>
           <include name="springTestContextAfterTestMethod"/>
-          <include name="findByTrabajadorAndPdoAnoAndPdoMesOrderByFechaAscTest"/>
         </methods>
-      </class> <!-- com.mitocode.repo.FaltasRepoTest -->
-=======
-      <class name="com.mitocode.controller.TestNG.TipoPlanillaControllerTest">
-        <methods>
-          <include name="springTestContextBeforeTestClass"/>
-          <include name="ListarTipoPlanillaPorEmpresa"/>
-          <include name="testAsignarTrabajador"/>
-          <include name="testListarPorTipoPlanilla"/>
-          <include name="EliminarTipoPlanilla"/>
-          <include name="testRegistrarTipoPlanilla"/>
-          <include name="springTestContextPrepareTestInstance"/>
-          <include name="springTestContextAfterTestClass"/>
-          <include name="testModifcar"/>
-          <include name="springTestContextBeforeTestMethod"/>
-          <include name="springTestContextAfterTestMethod"/>
-          <include name="eliminarTPD"/>
-        </methods>
-      </class> <!-- com.mitocode.controller.TestNG.TipoPlanillaControllerTest -->
->>>>>>> refs/heads/Julisa
+      </class> <!-- com.mitocode.controller.PostulanteControllerTestPI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,4 +1,4 @@
-	package com.mitocode.dto;
+package com.mitocode.dto;
 
 import javax.validation.Valid;
 
@@ -9,7 +9,7 @@ import com.mitocode.model.TipoDoc;
 
 public class PostulanteDTO {
 	
-	@Valid
+	//@Valid
 	private Postulante postulante;
 	
 	private TipoDoc tipoDoc;
